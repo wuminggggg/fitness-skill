@@ -98,7 +98,9 @@ python scripts/uninstall.py --yes      # 执行
 
 ### 许可
 
-作者待定（欢迎在 issue 里说明你的偏好）。
+本项目以 GNU General Public License v3.0 授权，见 LICENSE。
+
+GPL-3.0 是传染性许可证：你可以自由使用、修改、分发，但分发衍生作品时必须以同样的许可证开源，并保留版权与许可声明。若你希望允许使用者选择 GPL 的后续版本，可在源码文件头部加 GPL-3.0-or-later 声明。
 
 ---
 
@@ -190,4 +192,6 @@ This project is a fitness engineering heuristic and does not constitute medical 
 
 ### License
 
-To be decided by the author (open an issue with your preference).
+This project is licensed under the GNU General Public License v3.0. See LICENSE.
+
+GPL-3.0 is a copyleft license: you are free to use, modify and distribute it, but any distributed derivative work must be released under the same license and must retain the copyright and license notices. If you want to let users pick a later GPL version, add a GPL-3.0-or-later notice to your source file headers.
