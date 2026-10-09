@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+# personal data must never live in the repo
+data/
+snapshot.json
+*.zip
+.DS_Store

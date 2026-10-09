@@ -1,0 +1,205 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "user_profile",
+  "type": "object",
+  "properties": {
+    "age": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1,
+      "maximum": 120
+    },
+    "height_cm": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 80,
+      "maximum": 250
+    },
+    "weight_kg": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 20,
+      "maximum": 400
+    },
+    "target_weight_kg": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 20,
+      "maximum": 400
+    },
+    "daily_steps": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 100000
+    },
+    "exercise_frequency": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 7
+    },
+    "available_minutes": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 180
+    },
+    "preferred_session_minutes": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 180
+    },
+    "max_sessions_per_week": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 7
+    },
+    "pushups_max": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 300
+    },
+    "bodyweight_squat_reps": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 500
+    },
+    "desired_duration_weeks": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1,
+      "maximum": 520
+    },
+    "equipment": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 2000
+      },
+      "uniqueItems": true
+    },
+    "injuries_or_limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 2000
+      },
+      "uniqueItems": true
+    },
+    "exercise_dislikes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 2000
+      },
+      "uniqueItems": true
+    },
+    "medical_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 2000
+      },
+      "uniqueItems": true
+    },
+    "sex": {
+      "enum": [
+        "female",
+        "male",
+        "other",
+        "prefer_not_to_say",
+        null
+      ]
+    },
+    "occupation_activity": {
+      "enum": [
+        "sedentary",
+        "standing",
+        "physical",
+        null
+      ]
+    },
+    "primary_goal": {
+      "enum": [
+        "fat_loss",
+        "muscle_gain",
+        "endurance",
+        "general_fitness",
+        "maintenance",
+        null
+      ]
+    },
+    "secondary_goal": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "preferred_training_time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "running_level": {
+      "enum": [
+        "none",
+        "walk",
+        "run_walk",
+        "continuous",
+        null
+      ]
+    },
+    "training_experience": {
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced",
+        null
+      ]
+    },
+    "schedule_constraints": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 6
+      },
+      "uniqueItems": true
+    },
+    "safety_screen_complete": {
+      "type": "boolean"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

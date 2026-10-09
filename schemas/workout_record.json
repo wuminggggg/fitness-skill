@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "workout_record",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "plan_id": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "completion": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "rpe": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 10
+    },
+    "duration_minutes": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 360
+    },
+    "training_load": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 3600
+    },
+    "performance_score": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 10000
+    },
+    "performance_test_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "date",
+    "plan_id",
+    "completion",
+    "duration_minutes"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "daily_checkin",
+  "type": "object",
+  "properties": {
+    "weight_kg": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 20,
+      "maximum": 400
+    },
+    "steps": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 100000
+    },
+    "fatigue": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 10
+    },
+    "sleep_hours": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 24
+    },
+    "sleep_quality": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 10
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "notes": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "symptoms": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "chest_pain",
+          "syncope",
+          "severe_breathlessness",
+          "acute_injury",
+          "abnormal_hr_with_discomfort"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "pain": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10
+    },
+    "soreness": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 10
+      }
+    }
+  },
+  "required": [
+    "date"
+  ],
+  "additionalProperties": false
+}

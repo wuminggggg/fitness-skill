@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "workout_target",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "plan_id": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "targets": {
+      "type": "object",
+      "properties": {
+        "steps": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100000
+        },
+        "active_minutes": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 180
+        },
+        "cardio_minutes": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 180
+        },
+        "strength_minutes": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 180
+        },
+        "mobility_minutes": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 180
+        },
+        "intensity": {
+          "enum": [
+            "low",
+            "moderate",
+            "high"
+          ]
+        }
+      },
+      "required": [
+        "steps",
+        "active_minutes",
+        "cardio_minutes",
+        "strength_minutes",
+        "mobility_minutes",
+        "intensity"
+      ],
+      "additionalProperties": false
+    },
+    "rpe_target": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10
+    },
+    "training_load_target": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1800
+    },
+    "phase": {
+      "enum": [
+        "INIT",
+        "ADAPTATION",
+        "PROGRESS",
+        "PLATEAU",
+        "DELOAD"
+      ]
+    },
+    "safety_status": {
+      "enum": [
+        "OK",
+        "STOP_TRAINING",
+        "REVIEW_REQUIRED",
+        "NEEDS_SCREENING"
+      ]
+    },
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "change": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "previous_value": {},
+          "new_value": {}
+        },
+        "required": [
+          "change",
+          "reason",
+          "previous_value",
+          "new_value"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "date",
+    "plan_id",
+    "targets",
+    "rpe_target",
+    "training_load_target",
+    "phase",
+    "safety_status",
+    "changes"
+  ],
+  "additionalProperties": false
+}
